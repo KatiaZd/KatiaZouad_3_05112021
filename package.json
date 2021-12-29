@@ -1,0 +1,22 @@
+{
+  "name": "projet3",
+  "version": "1.0.0",
+  "description": "Projet \"OhMyFood\" OCR",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch style.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KatiaZd/KatiaZouad_3_05112021.git"
+  },
+  "author": "Katia ZOUAD",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KatiaZd/KatiaZouad_3_05112021/issues"
+  },
+  "homepage": "https://github.com/KatiaZd/KatiaZouad_3_05112021#readme",
+  "dependencies": {
+    "sass": "^1.43.4"
+  }
+}
