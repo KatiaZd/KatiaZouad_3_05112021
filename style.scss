@@ -320,10 +320,6 @@ header{
  
   }
 
-
- 
-
-
   /* RESTAURANT1 LA PALETTE DU GOUT */
 
   img{
@@ -338,7 +334,7 @@ header{
     }
   }
 
-  .restau1_header{
+  .restau_header{
 
     position: relative;
 
@@ -351,13 +347,7 @@ header{
   }
 
 
-
-
-
-
-
-
-  .restau1_title{
+  .restau_title{
     background: #F2F2F2;
     border-radius: 30px 30px 0 0;
     margin-top: -150px;
@@ -402,20 +392,20 @@ header{
 
   /* Restau wrapper */
 
-  .restau1_wrapper{
+  .restau_wrapper{
     background: #f2f2f2;
     display: grid;
     grid-template-columns: 1fr;
     padding: 10px;
     gap: 20px;
+    padding-bottom: 50px;
 
     @media (min-width: 800px) {
       display: grid;
       grid-template-columns: repeat(3,1fr);
     }
 
-  
-    .restau1_menu{
+    .restau_menu{
       position: relative;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -443,7 +433,7 @@ header{
     }
 
 
-    .restau1_item{
+    .restau_item{
 
       padding: 20px;
       display: flex;
@@ -454,6 +444,20 @@ header{
       box-shadow: 1px 2px 6px -2px grey;
       overflow: hidden;  /*Afin de "cacher" ma checkbox */
       margin: 10px 0;
+      animation: gradually 2s ;
+      animation-fill-mode: both;
+
+
+      
+    @keyframes gradually {
+      0% {
+        transform: scale(0) ;
+      }
+      100% {
+        transform: scale(1)
+      }
+    }
+
       
       &:hover{
         cursor: pointer;
@@ -492,7 +496,7 @@ header{
           font-size: 18px;
         }
     
-    .restau1_item_description{
+    .restau_item_description{
       padding: 10px;
       overflow: hidden;
     }
@@ -512,9 +516,41 @@ header{
       margin-right: 20px;
     }
 
-
   }
 }
+
+.order{
+
+  background-color: #f2f2f2;
+  height: 100px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+
+  .btn_order{
+    cursor: pointer;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 15px;
+    background-image: linear-gradient(to top, #9356DC, #FF79DA);
+    transition-duration: 1s;
+    box-shadow:  5px 5px 10px rgb(0 0 0 / 25%);
+    color: white;
+    border: 0;
+    text-decoration: none;
+    font-weight: bold;
+  
+  }
+    .btn_order:hover{
+      background-color: #fff;
+      box-shadow: 5px 5px 10px rgb(0 0 0 / 50%);
+      opacity: 0.5;
+      transform: scale(1.01);
+  }
+}
+ 
+
+
   
 
 

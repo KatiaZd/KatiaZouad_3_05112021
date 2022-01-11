@@ -298,17 +298,17 @@ img {
   }
 }
 
-.restau1_header {
+.restau_header {
   position: relative;
 }
-.restau1_header a {
+.restau_header a {
   position: absolute;
   top: 25%;
   margin-left: 20px;
   font-size: 15px;
 }
 
-.restau1_title {
+.restau_title {
   background: #F2F2F2;
   border-radius: 30px 30px 0 0;
   margin-top: -150px;
@@ -316,23 +316,23 @@ img {
   height: 150px;
   display: flex;
 }
-.restau1_title h2 {
+.restau_title h2 {
   font-family: "Shrikhand", cursive;
   font-size: 30px;
   padding: 30px 0 3px 15px;
   flex: 1;
 }
-.restau1_title .heart {
+.restau_title .heart {
   position: relative;
   align-items: center;
   margin: 40px 50px 0 0;
   cursor: pointer;
 }
-.restau1_title .heart .far {
+.restau_title .heart .far {
   position: absolute;
   font-size: 25px;
 }
-.restau1_title .heart .fas {
+.restau_title .heart .fas {
   font-size: 25px;
   background: linear-gradient(to right, #9356DC, #FF79DA);
   -webkit-background-clip: text;
@@ -340,37 +340,38 @@ img {
   opacity: 0;
   transition: all 1s;
 }
-.restau1_title .heart .fas:hover {
+.restau_title .heart .fas:hover {
   opacity: 1;
   transform: scale(1.1);
 }
 
 /* Restau wrapper */
-.restau1_wrapper {
+.restau_wrapper {
   background: #f2f2f2;
   display: grid;
   grid-template-columns: 1fr;
   padding: 10px;
   gap: 20px;
+  padding-bottom: 50px;
 }
 @media (min-width: 800px) {
-  .restau1_wrapper {
+  .restau_wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 }
-.restau1_wrapper .restau1_menu {
+.restau_wrapper .restau_menu {
   position: relative;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.restau1_wrapper h3 {
+.restau_wrapper h3 {
   text-transform: uppercase;
   position: relative;
   padding-bottom: 5px;
 }
-.restau1_wrapper h3:after {
+.restau_wrapper h3:after {
   position: absolute;
   content: "";
   background-color: #99e2d0;
@@ -380,7 +381,7 @@ img {
   bottom: 0;
   margin-left: 14px;
 }
-.restau1_wrapper .restau1_item {
+.restau_wrapper .restau_item {
   padding: 20px;
   display: flex;
   background: white;
@@ -391,14 +392,24 @@ img {
   overflow: hidden;
   /*Afin de "cacher" ma checkbox */
   margin: 10px 0;
+  animation: gradually 2s;
+  animation-fill-mode: both;
 }
-.restau1_wrapper .restau1_item:hover {
+@keyframes gradually {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.restau_wrapper .restau_item:hover {
   cursor: pointer;
 }
-.restau1_wrapper .restau1_item:hover .price-ok {
+.restau_wrapper .restau_item:hover .price-ok {
   margin-right: 0;
 }
-.restau1_wrapper .restau1_item:hover i.fa-check-circle {
+.restau_wrapper .restau_item:hover i.fa-check-circle {
   animation: rotateCircle 0.5s ease-in-out;
 }
 @keyframes rotateCircle {
@@ -409,7 +420,7 @@ img {
     tranform: rotate 0;
   }
 }
-.restau1_wrapper .restau1_item .price-ok {
+.restau_wrapper .restau_item .price-ok {
   background-color: #99e2d0;
   border-radius: 0 10px 10px 0;
   padding: 15px;
@@ -420,26 +431,53 @@ img {
   /* Pour l'alignement de la checkbox */
   align-items: center;
 }
-.restau1_wrapper .restau1_item i.fa-check-circle {
+.restau_wrapper .restau_item i.fa-check-circle {
   color: white;
   font-size: 18px;
 }
-.restau1_wrapper .restau1_item .restau1_item_description {
+.restau_wrapper .restau_item .restau_item_description {
   padding: 10px;
   overflow: hidden;
 }
-.restau1_wrapper .restau1_item h4, .restau1_wrapper .restau1_item p {
+.restau_wrapper .restau_item h4, .restau_wrapper .restau_item p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.restau1_wrapper .restau1_item .price {
+.restau_wrapper .restau_item .price {
   font-weight: 800;
   margin-left: auto;
   display: flex;
   align-items: flex-end;
   padding-bottom: 10px;
   margin-right: 20px;
+}
+
+.order {
+  background-color: #f2f2f2;
+  height: 100px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+.order .btn_order {
+  cursor: pointer;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 15px;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  transition-duration: 1s;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  color: white;
+  border: 0;
+  text-decoration: none;
+  font-weight: bold;
+}
+.order .btn_order:hover {
+  background-color: #fff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
+  transform: scale(1.01);
 }
 
 /* FOOTER */
