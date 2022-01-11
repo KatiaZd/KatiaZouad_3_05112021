@@ -5,14 +5,14 @@
   font-family: "Roboto", sans-serif;
 }
 
-/* .loader{
+/*.loader{
 
-  height: 100vh; 
-  position: fixed;
-  inset: 0;           /*Pour fixer la position*/
-/* z-index: 2;
-background-color: rgba(242, 242, 242, 1);  /*En rgbA pour l'opacité MENTORAT*/
-/* opacity: 0.9;
+ height: 100vh; 
+ position: fixed;
+ inset: 0;           /*Pour fixer la position*/
+/*  z-index: 2;
+ background-color: rgba(242, 242, 242, 1);  /*En rgbA pour l'opacité MENTORAT*/
+/*  opacity: 0.9;
 
 
   &:after{
@@ -29,8 +29,8 @@ background-color: rgba(242, 242, 242, 1);  /*En rgbA pour l'opacité MENTORAT*/
     animation: infiniteRotate 3s linear infinite, stopLoader;
     display: block;
 
-   // animation-iteration-count: 2; //Début de piste
-    //animation-fill-mode: both;
+   animation-iteration-count: 2; //Début de piste
+  animation-fill-mode: both;
 
 
   }
@@ -66,11 +66,12 @@ background-color: rgba(242, 242, 242, 1);  /*En rgbA pour l'opacité MENTORAT*/
   }
 
   @keyframes stopLoader {
-    animation-delay: 2s ;
+    100{
+    animation-delay: 2s;
     opacity: 0;
-
   }
 
+} 
 } */
 /* GENERAL */
 h1 {
@@ -97,6 +98,7 @@ body {
   margin: auto;
 }
 
+/* PAGE D'ACCUEIL */
 header {
   box-shadow: 0 0 1px grey;
   position: relative;
@@ -108,7 +110,7 @@ header p {
   font-size: 30px;
 }
 
-/* MAIN */
+/* PAGE D'ACCUEIL - MAIN */
 .city {
   display: flex;
   justify-content: center;
@@ -152,7 +154,7 @@ header p {
   transform: scale(1.01);
 }
 
-/* FONCTIONNEMENT */
+/* PAGE D'ACCUEIL - FONCTIONNEMENT */
 .fonctionnement {
   padding: 20px;
   counter-reset: numbers;
@@ -205,7 +207,7 @@ header p {
   margin-right: 10px;
 }
 
-/* RESTAURANTS */
+/* PAGE D'ACCUEIL - RESTAURANTS */
 #restaurants {
   background-color: #F6F6F6;
   padding-bottom: 70px;
@@ -285,7 +287,7 @@ header p {
   transform: scale(1.2);
 }
 
-/* RESTAURANT1 LA PALETTE DU GOUT */
+/* PAGES RESTAURANTS */
 img {
   width: 100%;
   height: 500px;
@@ -294,7 +296,7 @@ img {
 
 @media (min-width: 800px) {
   main {
-    padding: 30px;
+    padding: 0 30px 30px 30px;
   }
 }
 
@@ -345,7 +347,7 @@ img {
   transform: scale(1.1);
 }
 
-/* Restau wrapper */
+/* PAGES RESTAURANTS - WRAPPER */
 .restau_wrapper {
   background: #f2f2f2;
   display: grid;
@@ -365,6 +367,7 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  padding: 3px;
 }
 .restau_wrapper h3 {
   text-transform: uppercase;
@@ -393,7 +396,6 @@ img {
   /*Afin de "cacher" ma checkbox */
   margin: 10px 0;
   animation: gradually 2s;
-  animation-fill-mode: both;
 }
 @keyframes gradually {
   0% {
@@ -402,6 +404,15 @@ img {
   100% {
     transform: scale(1);
   }
+}
+.restau_wrapper .restau_item .anim1 {
+  animation-delay: 0.1;
+}
+.restau_wrapper .restau_item .anim2 {
+  animation-delay: 0.3s;
+}
+.restau_wrapper .restau_item .anim3 {
+  animation-delay: 0.6s;
 }
 .restau_wrapper .restau_item:hover {
   cursor: pointer;
@@ -489,11 +500,12 @@ footer {
 footer p {
   font-family: "Shrikhand", cursive;
   font-size: 18px;
-  padding: 5px 0 10px 50px;
+  padding: 5px 0 15px 10px;
   display: flex;
 }
 footer ul {
   list-style-type: none;
+  padding: 0;
 }
 footer li {
   margin: 10px;

@@ -5,14 +5,14 @@
 }
 
 
-/* .loader{
+ /*.loader{
 
   height: 100vh; 
   position: fixed;
   inset: 0;           /*Pour fixer la position*/
-  /* z-index: 2;
+ /*  z-index: 2;
   background-color: rgba(242, 242, 242, 1);  /*En rgbA pour l'opacité MENTORAT*/
-  /* opacity: 0.9;
+ /*  opacity: 0.9;
   
 
   &:after{
@@ -29,8 +29,8 @@
     animation: infiniteRotate 3s linear infinite, stopLoader;
     display: block;
 
-   // animation-iteration-count: 2; //Début de piste
-    //animation-fill-mode: both;
+   animation-iteration-count: 2; //Début de piste
+  animation-fill-mode: both;
     
     
   }
@@ -66,15 +66,13 @@
   }
 
   @keyframes stopLoader {
-    animation-delay: 2s ;
+    100{
+    animation-delay: 2s;
     opacity: 0;
-
   }
 
+} 
 } */
-
-
-
 
 
 
@@ -99,7 +97,7 @@ body{
   margin: auto;
 }
 
-
+/* PAGE D'ACCUEIL */
 
 header{
   box-shadow: 0 0 1px grey;
@@ -112,8 +110,7 @@ header{
       font-size: 30px;
   }
 }
-/* MAIN */
-
+/* PAGE D'ACCUEIL - MAIN */
 .city {
 
   display: flex;
@@ -131,10 +128,10 @@ header{
   i{
       font-size: 15px;
   }
-
 }
 
 .accroche{
+
   text-align: center;
   background-color: #FAFAFA;
   padding: 30px 0 100px 0;
@@ -142,6 +139,7 @@ header{
   p{
       margin-bottom: 50px;
   }
+
   .btn_explorer{ 
       padding: 15px 30px;
       border-radius: 30px;
@@ -153,21 +151,20 @@ header{
       border: 0;
       text-decoration: none;
       font-weight: bold;
-
   }
+
   .btn_explorer:hover{
     background-color: #fff;
     box-shadow: 5px 5px 10px rgb(0 0 0 / 50%);
     opacity: 0.5;
     transform: scale(1.01);
-    
-
   }
 }
 
-/* FONCTIONNEMENT */
+/* PAGE D'ACCUEIL - FONCTIONNEMENT */
 
 .fonctionnement{
+
   padding: 20px;
   counter-reset: numbers;
 
@@ -206,14 +203,13 @@ header{
         left: -15px;
       }
     
-      &:hover{                                //Même procédé pour la checkbox ?
+      &:hover{                                
         cursor: pointer;
         background-color: rgb(245, 237, 255);
 
         i{
           color: #9356DC;   //background de l'icone en même temps que l'arrière plan
         }
-  
       }
   
       @media (min-width: 800px) {  
@@ -227,7 +223,7 @@ header{
   }
 }
 
-/* RESTAURANTS */
+/* PAGE D'ACCUEIL - RESTAURANTS */
 
 #restaurants{
 
@@ -320,7 +316,7 @@ header{
  
   }
 
-  /* RESTAURANT1 LA PALETTE DU GOUT */
+  /* PAGES RESTAURANTS */
 
   img{
     width: 100%;
@@ -330,7 +326,7 @@ header{
 
   main{
     @media (min-width: 800px){
-      padding: 30px;
+      padding: 0 30px 30px 30px;
     }
   }
 
@@ -345,7 +341,6 @@ header{
       font-size: 15px;   
     }
   }
-
 
   .restau_title{
     background: #F2F2F2;
@@ -367,6 +362,7 @@ header{
       align-items: center;
       margin: 40px 50px 0 0;
       cursor: pointer;
+
       .far{
         position: absolute;
         font-size: 25px;
@@ -390,9 +386,10 @@ header{
   }
 
 
-  /* Restau wrapper */
+  /* PAGES RESTAURANTS - WRAPPER */
 
   .restau_wrapper{
+
     background: #f2f2f2;
     display: grid;
     grid-template-columns: 1fr;
@@ -410,6 +407,7 @@ header{
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+      padding: 3px;
     }
 
     h3{
@@ -427,11 +425,8 @@ header{
         left: 0;
         bottom: 0;
         margin-left: 14px;
-        
-
       }
     }
-
 
     .restau_item{
 
@@ -445,10 +440,7 @@ header{
       overflow: hidden;  /*Afin de "cacher" ma checkbox */
       margin: 10px 0;
       animation: gradually 2s ;
-      animation-fill-mode: both;
 
-
-      
     @keyframes gradually {
       0% {
         transform: scale(0) ;
@@ -458,12 +450,22 @@ header{
       }
     }
 
+    .anim1{
+      animation-delay: 0.1;
+    }
+    .anim2{
+      animation-delay: 0.3s;
+    }
+    .anim3{
+      animation-delay: 0.6s;
+    }
+  
       
       &:hover{
         cursor: pointer;
 
           .price-ok{
-          margin-right: 0;  
+            margin-right: 0;  
           }
 
           i.fa-check-circle{
@@ -475,7 +477,7 @@ header{
               100% {
                 tranform: rotate (0);
                 }
-           }
+            }
           }
       }
 
@@ -489,7 +491,6 @@ header{
           display: flex;  /* Pour l'alignement de la checkbox */
           align-items: center;
         }
-
 
         i.fa-check-circle{
           color: white;
@@ -539,8 +540,8 @@ header{
     border: 0;
     text-decoration: none;
     font-weight: bold;
-  
   }
+
     .btn_order:hover{
       background-color: #fff;
       box-shadow: 5px 5px 10px rgb(0 0 0 / 50%);
@@ -548,34 +549,6 @@ header{
       transform: scale(1.01);
   }
 }
- 
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* FOOTER */
 
@@ -588,12 +561,13 @@ footer{
   p{
     font-family: 'Shrikhand', cursive;
     font-size: 18px;
-    padding: 5px 0 10px 50px;
+    padding: 5px 0 15px 10px;
     display: flex;
   }
 
   ul{
     list-style-type: none;
+    padding: 0;
   }
 
   li{
@@ -615,23 +589,23 @@ footer{
     margin-right: 5px;
   }
 
-@media (min-width: 800px){
+  @media (min-width: 800px){
  
-  p{
-    align-items: center;
+    p{
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer_ul{
+    display: flex;
     justify-content: center;
-  }
+    }
 
-  .footer_ul{
-  display: flex;
-  justify-content: center;
+    .footer_li{
+    flex-direction: row;
+    margin-left: 50px;
+    }
   }
-
-  .footer_li{
-  flex-direction: row;
-  margin-left: 50px;
-  }
-}
 
 }
 
