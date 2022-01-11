@@ -1,36 +1,41 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
 
-/*.loader{
+/* .loader{
 
-  height: 1480px; 
+  height: 100vh; 
   position: fixed;
-  inset: 0;           //Pour fixer la position
-  z-index: 2;
-  background-color: #f3f3f3; 
-  opacity: 0.8;
-  animation-fill-mode: both;
+  inset: 0;           /*Pour fixer la position*/
+/* z-index: 2;
+background-color: rgba(242, 242, 242, 1);  /*En rgbA pour l'opacité MENTORAT*/
+/* opacity: 0.9;
 
 
-
-  .animation{
+  &:after{
+    content:"";
     margin: auto;
-    margin-top: 100px;
+    margin-top: 200px;
     margin-bottom: 100px;
     border: 15px solid #9356DC;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-top-color: #FF79DA;
     border-bottom-color:#99e2d0;
     border-radius: 50%;
-    animation: loader 4s linear infinite;
+    animation: infiniteRotate 3s linear infinite, stopLoader;
+    display: block;
+
+   // animation-iteration-count: 2; //Début de piste
+    //animation-fill-mode: both;
+
 
   }
 
-  @keyframes loader {
+  @keyframes infiniteRotate {
     0%{
       transform: rotate(0deg) scale(1);
       border-top-color:#99e2d0;
@@ -60,7 +65,13 @@
     } 
   }
 
-}*/
+  @keyframes stopLoader {
+    animation-delay: 2s ;
+    opacity: 0;
+
+  }
+
+} */
 /* GENERAL */
 h1 {
   padding: 20px;
@@ -267,8 +278,7 @@ header p {
   -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
-  transition: all 50ms;
-  /*N'est pas pris en compte ? */
+  transition: all 1s;
 }
 .card .card_def .fas:hover {
   opacity: 1;
@@ -310,30 +320,33 @@ img {
   font-family: "Shrikhand", cursive;
   font-size: 30px;
   padding: 30px 0 3px 15px;
+  flex: 1;
 }
 .restau1_title .heart {
   position: relative;
+  align-items: center;
+  margin: 40px 50px 0 0;
+  cursor: pointer;
 }
 .restau1_title .heart .far {
   position: absolute;
+  font-size: 25px;
 }
 .restau1_title .heart .fas {
-  /* Animation coeur */
+  font-size: 25px;
   background: linear-gradient(to right, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
-  transition: all 50ms;
-  /*N'est pas pris en compte ? */
+  transition: all 1s;
 }
 .restau1_title .heart .fas:hover {
   opacity: 1;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 /* Restau wrapper */
 .restau1_wrapper {
-  border: 1px solid red;
   background: #f2f2f2;
   display: grid;
   grid-template-columns: 1fr;
@@ -347,11 +360,25 @@ img {
   }
 }
 .restau1_wrapper .restau1_menu {
-  border: 1px solid green;
   position: relative;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.restau1_wrapper h3 {
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 5px;
+}
+.restau1_wrapper h3:after {
+  position: absolute;
+  content: "";
+  background-color: #99e2d0;
+  width: 45px;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  margin-left: 14px;
 }
 .restau1_wrapper .restau1_item {
   padding: 20px;
@@ -360,51 +387,59 @@ img {
   margin: 5px;
   padding: 0px;
   border-radius: 10px;
+  box-shadow: 1px 2px 6px -2px grey;
   overflow: hidden;
   /*Afin de "cacher" ma checkbox */
-  box-shadow: 1px 2px 6px -2px grey;
+  margin: 10px 0;
 }
-.restau1_wrapper .restau1_item_description {
-  border: 1px solid pink;
+.restau1_wrapper .restau1_item:hover {
+  cursor: pointer;
+}
+.restau1_wrapper .restau1_item:hover .price-ok {
+  margin-right: 0;
+}
+.restau1_wrapper .restau1_item:hover i.fa-check-circle {
+  animation: rotateCircle 0.5s ease-in-out;
+}
+@keyframes rotateCircle {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    tranform: rotate 0;
+  }
+}
+.restau1_wrapper .restau1_item .price-ok {
+  background-color: #99e2d0;
+  border-radius: 0 10px 10px 0;
+  padding: 15px;
+  margin-right: -50px;
+  width: 50px;
+  transition: all 0.5s;
+  display: flex;
+  /* Pour l'alignement de la checkbox */
+  align-items: center;
+}
+.restau1_wrapper .restau1_item i.fa-check-circle {
+  color: white;
+  font-size: 18px;
+}
+.restau1_wrapper .restau1_item .restau1_item_description {
   padding: 10px;
   overflow: hidden;
 }
-.restau1_wrapper h4, .restau1_wrapper p {
+.restau1_wrapper .restau1_item h4, .restau1_wrapper .restau1_item p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.restau1_wrapper .price {
+.restau1_wrapper .restau1_item .price {
   font-weight: 800;
   margin-left: auto;
   display: flex;
   align-items: flex-end;
   padding-bottom: 10px;
   margin-right: 20px;
-  cursor: pointer;
-}
-.restau1_wrapper .price-ok {
-  background-color: #99e2d0;
-  border-radius: 0 10px 10px 0;
-  padding: 10px;
-  margin-right: -40px;
-  width: 40px;
-  transition: all 1s;
-  cursor: pointer;
-  display: flex;
-  /* Pour l'alignement de la checkbox */
-  align-items: center;
-}
-.restau1_wrapper .price-ok:hover {
-  margin-right: 0;
-  cursor: pointer;
-}
-.restau1_wrapper i.fa-check-circle {
-  color: white;
-  font-size: large;
-}
-.restau1_wrapper i.fa-check-circle:hover {
-  transform: rotate(180deg);
 }
 
 /* FOOTER */
