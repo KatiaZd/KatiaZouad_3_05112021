@@ -5,74 +5,65 @@
   font-family: "Roboto", sans-serif;
 }
 
-/*.loader{
-
- height: 100vh; 
- position: fixed;
- inset: 0;           /*Pour fixer la position*/
-/*  z-index: 2;
- background-color: rgba(242, 242, 242, 1);  /*En rgbA pour l'opacité MENTORAT*/
-/*  opacity: 0.9;
-
-
-  &:after{
-    content:"";
-    margin: auto;
-    margin-top: 200px;
-    margin-bottom: 100px;
-    border: 15px solid #9356DC;
-    width: 100px;
-    height: 100px;
+/* LOADER */
+.loader {
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  /*Pour fixer la position*/
+  z-index: 2;
+  background-color: #f2f2f2;
+  /*En rgbA pour l'opacité*/
+  opacity: 0.9;
+  animation: 1s linear 3s 1 normal both running stopLoader;
+}
+.loader:after {
+  content: "";
+  margin: auto;
+  margin-top: 200px;
+  margin-bottom: 100px;
+  border: 15px solid #9356DC;
+  width: 100px;
+  height: 100px;
+  border-top-color: #FF79DA;
+  border-bottom-color: #99e2d0;
+  border-radius: 50%;
+  animation: 3s linear 0s infinite reverse both running infiniteRotate;
+  display: block;
+}
+@keyframes infiniteRotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+    border-top-color: #99e2d0;
+    border-bottom-color: #FF79DA;
+  }
+  25% {
     border-top-color: #FF79DA;
-    border-bottom-color:#99e2d0;
-    border-radius: 50%;
-    animation: infiniteRotate 3s linear infinite, stopLoader;
-    display: block;
-
-   animation-iteration-count: 2; //Début de piste
-  animation-fill-mode: both;
-
-
+    border-bottom-color: #99e2d0;
   }
-
-  @keyframes infiniteRotate {
-    0%{
-      transform: rotate(0deg) scale(1);
-      border-top-color:#99e2d0;
-      border-bottom-color: #FF79DA;
-    }
-
-    25%{
-      border-top-color:#FF79DA;
-      border-bottom-color: #99e2d0;
-    }
-
-    50%{
-      transform: rotate(360deg) scale(1.13);
-      border-top-color:#99e2d0;
-      border-bottom-color: #FF79DA;
-    }
-
-    75%{
-      border-top-color:#FF79DA;
-      border-bottom-color: #99e2d0;
-    }
-
-    100%{
-      transform: rotate (720deg) scale(1);
-      border-top-color:#99e2d0;
-      border-bottom-color: #FF79DA;
-    } 
+  50% {
+    transform: rotate(360deg) scale(1.13);
+    border-top-color: #99e2d0;
+    border-bottom-color: #FF79DA;
   }
-
-  @keyframes stopLoader {
-    100{
-    animation-delay: 2s;
+  75% {
+    border-top-color: #FF79DA;
+    border-bottom-color: #99e2d0;
+  }
+  100% {
+    transform: rotate 720deg scale(1);
+    border-top-color: #99e2d0;
+    border-bottom-color: #FF79DA;
+  }
+}
+@keyframes stopLoader {
+  100% {
     opacity: 0;
+    overflow: hidden;
+    z-index: -1000;
   }
+}
 
-} 
-} */
 /* GENERAL */
 h1 {
   padding: 20px;
@@ -98,7 +89,7 @@ body {
   margin: auto;
 }
 
-/* PAGE D'ACCUEIL */
+/* PAGE D'ACCUEIL - HEADER */
 header {
   box-shadow: 0 0 1px grey;
   position: relative;
@@ -247,6 +238,7 @@ header p {
   object-fit: cover;
   border-radius: 15px 15px 0 0;
   display: block;
+  /*Combler le "vide" entre l'image et la div. Par défault, en display in-line */
 }
 .card .card_new {
   position: absolute;
@@ -405,15 +397,6 @@ img {
     transform: scale(1);
   }
 }
-.restau_wrapper .restau_item .anim1 {
-  animation-delay: 0.1;
-}
-.restau_wrapper .restau_item .anim2 {
-  animation-delay: 0.3s;
-}
-.restau_wrapper .restau_item .anim3 {
-  animation-delay: 0.6s;
-}
 .restau_wrapper .restau_item:hover {
   cursor: pointer;
 }
@@ -464,6 +447,7 @@ img {
   margin-right: 20px;
 }
 
+/* BOUTON "COMMANDER" */
 .order {
   background-color: #f2f2f2;
   height: 100px;
