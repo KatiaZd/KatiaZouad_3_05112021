@@ -280,6 +280,16 @@ header p {
 }
 
 /* PAGES RESTAURANTS - HEADER */
+.restau_header {
+  position: relative;
+}
+.restau_header a {
+  position: absolute;
+  top: 25%;
+  margin-left: 20px;
+  font-size: 15px;
+}
+
 img {
   width: 100%;
   height: 500px;
@@ -290,16 +300,6 @@ img {
   main {
     padding: 0 30px 30px 30px;
   }
-}
-
-.restau_header {
-  position: relative;
-}
-.restau_header a {
-  position: absolute;
-  top: 25%;
-  margin-left: 20px;
-  font-size: 15px;
 }
 
 .restau_title {
@@ -416,6 +416,9 @@ img {
 }
 .restau_wrapper .restau_item.anim-delay9 {
   animation-delay: 4.5s;
+}
+.restau_wrapper .restau_item.anim-delay10 {
+  animation-delay: 1.8s;
 }
 @keyframes gradually {
   0% {
