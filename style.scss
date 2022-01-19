@@ -70,7 +70,6 @@
   }
 } 
 
-
 /* GENERAL */
 
 h1{
@@ -313,7 +312,7 @@ header{
     } 
 }
 
-/* PAGES RESTAURANTS */
+/* PAGES RESTAURANTS - HEADER */
 
 img{
     width: 100%;
@@ -383,7 +382,6 @@ main{
     
 }
 
-
 /* PAGES RESTAURANTS - WRAPPER */
 
 .restau_wrapper{
@@ -437,17 +435,45 @@ main{
       box-shadow: 1px 2px 6px -2px grey;
       overflow: hidden;  /*Afin de "cacher" ma checkbox */
       margin: 10px 0;
-      animation: gradually 2s ;
+      animation: gradually 5s ;
 
-    @keyframes gradually {
+      .anim-delay1 {
+        animation-delay: 1s;
+      }
+  
+      .anim-delay2 {
+        animation-delay: 2s;
+      }
+  
+      .anim-delay3 {
+        animation-delay: 3s;
+      }
+
+
+    /*@keyframes gradually {
       0% {
         transform: scale(0) ;
       }
       100% {
         transform: scale(1)
       }
+    }*/
+
+    @keyframes gradually {
+      0% {
+        transform: translateY(20px);
+        opacity: 0%;
+      }
+      50%{
+        opacity: 0%;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 100%;
+      }
     }
 
+   
       &:hover{
         cursor: pointer;
 
