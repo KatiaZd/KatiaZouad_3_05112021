@@ -14,7 +14,7 @@ Les compétences évaluées sont:
 
 ## Brief créatif :art:
 
-Contenu des pages :
+Contenu des pages :arrow_down:
 
 Page d'accueil (x1) :
 - Affichage de la localisation des restaurants. À terme, il sera possible de choisir sa localisation pour trouver des restaurants proches d'un certain lieu ;
@@ -35,7 +35,7 @@ Footer :
 - Au clic sur "Contact", un renvoi vers une adresse mail est effectué.
 
 
-Effets graphiques et animations :
+Effets graphiques et animations :arrow_down:
 
 Les effets accessibles au clic ou au survol sont visibles sur la maquette. Ils devront utiliser les animations ou transitions CSS, pas de JavaScript ni de librairie.
 
