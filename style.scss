@@ -55,7 +55,7 @@
     }
 
     100%{
-      transform: rotate (720deg) scale(1);
+      transform: rotate(720deg) scale(1);
       border-top-color:#99e2d0;
       border-bottom-color: #FF79DA;
     } 
@@ -496,7 +496,7 @@ main{
                 transform: rotate(-270deg); //1+demi
                 }
               100% {
-                tranform: rotate (0);
+                transform: rotate (0);
                 }
             }
           }
