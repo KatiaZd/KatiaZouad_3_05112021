@@ -17,10 +17,11 @@ Les compétences évaluées sont:
 Contenu des pages :arrow_down:
 
 Page d'accueil (x1) :
+- Apparition d'un loading spinner d'une durée comprise entre 1 et 3 secondes.
 - Affichage de la localisation des restaurants. À terme, il sera possible de choisir sa localisation pour trouver des restaurants proches d'un certain lieu ;
 - Une courte présentation de l'entreprise ;
 - Une section contenant les 4 menus sous forme de cartes. Au clic sur la carte, l'utilisateur est redirigé vers la page du menu ;
-- Apparition d'un loading spinner d'une durée comprise entre 1 et 3 secondes.
+
 
 Pages de menu (x4) :
 - 4 pages contenant chacune le menu d'un restaurant.
