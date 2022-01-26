@@ -15,7 +15,7 @@
   background-color: #f2f2f2;
   /*En rgbA pour l'opacité*/
   opacity: 0.9;
-  animation: 1s linear 3s 1 normal both running stopLoader;
+  animation: 1s linear 2s 1 normal both running stopLoader;
 }
 .loader:after {
   content: "";
@@ -310,7 +310,7 @@ img {
   height: 150px;
   display: flex;
 }
-.restau_title h2 {
+.restau_title h1 {
   font-family: "Shrikhand", cursive;
   font-size: 30px;
   padding: 30px 0 3px 15px;
@@ -361,18 +361,18 @@ img {
   white-space: nowrap;
   padding: 3px;
 }
-.restau_wrapper h3 {
+.restau_wrapper h2 {
   text-transform: uppercase;
   position: relative;
   padding-bottom: 5px;
 }
-.restau_wrapper h3:after {
+.restau_wrapper h2:after {
   position: absolute;
   content: "";
   background-color: #99e2d0;
   width: 45px;
   height: 3px;
-  left: 0;
+  left: -14px;
   bottom: 0;
   margin-left: 14px;
 }
@@ -466,10 +466,11 @@ img {
   padding: 10px;
   overflow: hidden;
 }
-.restau_wrapper .restau_item h4, .restau_wrapper .restau_item p {
+.restau_wrapper .restau_item h3, .restau_wrapper .restau_item p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  padding: 0;
 }
 .restau_wrapper .restau_item .price {
   font-weight: 800;
