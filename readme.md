@@ -55,7 +55,7 @@ Uniquement en CSS, SCSS est recommandé.
 - ✅ Approche mobile-first, pour cela seules les maquettes mobiles sont fournis ;
 - ✅ Responsive sur mobile, tablette et desktop ;
 - ✅ Parfaite compatibilité avec les dernières versions desktop de Chrome et Firefox ;
-- ✅ Validation W3C sans erreur, warning autorisés.
+- ✅ Validation W3C sans erreur.
 
 
 
