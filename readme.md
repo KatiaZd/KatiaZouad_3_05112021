@@ -1,4 +1,4 @@
-# Projet "Ohmyfood" 
+# Projet Ohmyfood
 
 Projet 3 "Dynamiser un site web avec des animations CSS" du parcours "Développeur d'application - JavaScript React" d'OCR. 
 
