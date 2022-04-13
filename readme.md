@@ -14,7 +14,7 @@ Les compétences évaluées sont:
 
 <h2>Brief créatif :art: </h2>
 
-Contenu des pages :arrow_down:
+<h3>Contenu des pages :arrow_down: </h3>
 
 Page d'accueil (x1) :
 - Apparition d'un loading spinner d'une durée comprise entre 1 et 3 secondes.
