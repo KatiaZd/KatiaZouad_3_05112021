@@ -7,12 +7,12 @@ Les compétences évaluées sont:
 - Mettre en oeuvre des effets CSS graphiques avancés ;
 - Mettre en place une structure de navigation pour un site web.
 
-## Objectifs du projet :
+<h2>Objectifs du projet : </h2>
 
 - Phase 1 : Développer un site proposant le menus de grands restaurants parisiens ;
 - Phase 2 : Permettre la réservation en ligne et la composition de menus.
 
-## Brief créatif :art:
+<h2>Brief créatif :art: </h2>
 
 Contenu des pages :arrow_down:
 
@@ -36,7 +36,7 @@ Footer :
 - Au clic sur "Contact", un renvoi vers une adresse mail est effectué.
 
 
-Effets graphiques et animations :arrow_down:
+<h3>Effets graphiques et animations :arrow_down: </h3>
 
 Les effets accessibles au clic ou au survol sont visibles sur la maquette. Ils devront utiliser les animations ou transitions CSS, pas de JavaScript ni de librairie.
 
@@ -48,10 +48,11 @@ Pages de menu :
 - À l'arrivée sur la page, les plats devront apparaître progressivement avec un léger décalage dans le temps ;
 - Le visiteur peut ajouter les plats qu'il souhaite à sa commande en cliquant dessus. Cela fait apparaître une petite coche à droite du plat. Cette coche devra coulisser de la droite vers la gauche. Pour cette première version, l'effet peut apparaître au survol. Si l'intitulé des plats sont trop long, il devra être rogné avec des points de suspension. 
 
-# Technologies
+<h2>Technologies</h2>
 Uniquement en CSS, SCSS est recommandé.
 
-# Compatibilité 
+<h2>Compatibilité</h2>
+
 - ✅ Approche mobile-first, pour cela seules les maquettes mobiles sont fournis ;
 - ✅ Responsive sur mobile, tablette et desktop ;
 - ✅ Parfaite compatibilité avec les dernières versions desktop de Chrome et Firefox ;
