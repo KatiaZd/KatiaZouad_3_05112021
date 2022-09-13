@@ -1,6 +1,6 @@
 # Projet Ohmyfood
 
-Projet 3 "Dynamiser un site web avec des animations CSS" du parcours "Développeur d'application - JavaScript React" d'OCR. 
+"Dynamiser un site web avec des animations CSS" d'OCR. 
 
 Les compétences évaluées sont:
 - Assurer la cohérences graphique d'un site web ;
