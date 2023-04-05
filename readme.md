@@ -49,7 +49,7 @@ Pages de menu :
 - Le visiteur peut ajouter les plats qu'il souhaite à sa commande en cliquant dessus. Cela fait apparaître une petite coche à droite du plat. Cette coche devra coulisser de la droite vers la gauche. Pour cette première version, l'effet peut apparaître au survol. Si l'intitulé des plats sont trop long, il devra être rogné avec des points de suspension. 
 
 <h2>Technologies</h2>
-Uniquement en CSS, SCSS est recommandé.
+Uniquement en SCSS.
 
 <h2>Compatibilité</h2>
 
